@@ -10,7 +10,7 @@ The script installs and enables a few drupal modules that I have found useful in
 
 I hope to make changes to it so that the drupal config is handled differently in the future. Please note that I have only tested this on Ubuntu/Pop_OS 21, also you will need to have installed composer and lando on your machine before you begin.
 
-To use .. download/clone the Drupal9-lando-dev-site-creator.sh file, set the permissions so it can execute (chmod). Move the file to a location where you want your new site to be and run it. After the script has run change diectory (cd) to the new site folder.
+To use .. download/clone the Drupal9-lando-dev-site-creator.sh file, set the permissions so it can execute (chmod). Move the file to a location where you want your new site to be and run it. After the script has run change directory (cd) to the new site folder.
 
 Useful links:
 
