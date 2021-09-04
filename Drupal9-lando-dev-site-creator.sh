@@ -152,7 +152,7 @@ chmod 644 settings/settings.shared.php
 chmod 644 settings.php
 
 # Trusted host settings to settings.php
-sed -i "717a \$settings['trusted_host_patterns'] = [\n   '^localhost$',\n   '^lando.site$',\n   '^.*\.lando\.site$',\n   ];" settings.php
+sed -i "717a \*/\n\$settings['trusted_host_patterns'] = [\n   '^localhost$',\n   '^lando.site$',\n   '^.*\.lando\.site$',\n   ];\n/**" settings.php
 
 # Changes to settings.php file
 # Empty the file
@@ -161,7 +161,7 @@ cp /dev/null settings.php
 printf "<?php\n\n include __DIR__ . '/settings/settings.shared.php';" >> settings.php;
 
 # Add trusted host patterns to settings.shared.php
-sed -i "717a \$settings['trusted_host_patterns'] = [\n   '^localhost$',\n   '^lando.site$',\n   '^.*\.lando\.site$',\n   ];" settings/settings.shared.php
+sed -i "717a \*/\n\$settings['trusted_host_patterns'] = [\n   '^localhost$',\n   '^lando.site$',\n   '^.*\.lando\.site$',\n   ];\n/**" settings/settings.shared.php
 
 sed -i "$ a if (file_exists(\$app_root . '/' . \$site_path . '/settings/settings.local.php')) {\n  include \$app_root . '/' . \$site_path . '/settings/settings.local.php';\n}" settings/settings.shared.php
 
