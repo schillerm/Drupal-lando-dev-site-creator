@@ -172,6 +172,9 @@ cp sites/example.settings.local.php sites/default/settings/settings.local.php
 # Move into the settings folder
 cd sites/default/settings
 
+# Change rebuild_access to FALSE in settings.local file
+sed -i "119s/TRUE/FALSE/" settings.local.php
+
 # Add database settings to settings.local file
 sed -i "$ a \$databases\['default'\]\['default'\] = array (\n  'database' => '$version',\n  'username' => '$version',\n  'password' => '$version',\n  'prefix' => '',\n  'host' => 'database',\n  'port' => '3306',\n  'namespace' => 'Drupal\\\\\\\Core\\\\\\\Database\\\\\\\Driver\\\\\\\mysql',\n  'driver' => 'mysql',\n);\n" settings.local.php
 
