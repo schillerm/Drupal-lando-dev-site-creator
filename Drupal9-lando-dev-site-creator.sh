@@ -203,6 +203,9 @@ printf "parameters:\n  http.response.debug_cacheability_headers: true\n  twig.co
 cd ../../
 sed -i '42i \            },\n            "file-mapping": {\n                "[web-root]/sites/development.services.yml": false' composer.json
 
+# Change composer.json so we have patching - actual patches commented out
+sed -i '39i \	"enable-patching": "true",\n	    "_patches": {\n		"drupal/module_name": {\n		    "Comment about patch": "url of the patch"\n		}\n	    },' composer.json
+
 # Clear the cache
 lando drush cr
 
