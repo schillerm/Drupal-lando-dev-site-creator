@@ -90,7 +90,7 @@ lando init \
   --name $sitename
 
 # Add extra bits to .lando.yml file
-sed -i "$ a\  xdebug: true\ntooling:\n  drush:\n    service: appserver\n    env:\n       DRUSH_OPTIONS_URI: "https://$sitename.lndo.site"\n  drupal:\n    service: appserver\n    cmd: "/app/vendor/drupal/console/bin/drupal"\nservices:\n appserver:\n  build:\n   - composer install" .lando.yml
+sed -i "$ a\  xdebug: true\ntooling:\n  drush:\n    service: appserver\n    env:\n       DRUSH_OPTIONS_URI: "https://$sitename.lndo.site"\n  drupal:\n    service: appserver\n    cmd: "/app/vendor/drupal/console/bin/drupal"\nservices:\n appserver:\n  type: php:8.0\n  build:\n   - composer install" .lando.yml
 
 # Start lando
 lando start
