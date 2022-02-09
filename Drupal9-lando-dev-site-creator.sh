@@ -132,7 +132,7 @@ lando drush en config_direct_save
 lando drush cr
 
 # Add recommended drupal 9 gitignore file 
-curl -o .gitignore 'https://raw.githubusercontent.com/drupal-composer/drupal-project/9.x/.gitignore'
+curl -o .gitignore 'https://raw.githubusercontent.com/drupal/drupal/9.3.x/example.gitignore'
 
 # Change .gitignore permissions
 chmod 644 .gitignore
