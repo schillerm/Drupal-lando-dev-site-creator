@@ -12,7 +12,7 @@ echo -e "${red}Drupal 9 dev site creator${reset}"
 
 while true; do
     read -p "
-This script creates a new Drupal 9 site and sets it up for development using composer and lando. It's designed to run on Ubuntu / Pop os 20, I have not tested it on Mac os. Before you begin you will need composer (https://getcomposer.org/) and lando (https://lando.dev/) installed. You should run this script in the directory where you want the new site to go.
+This script creates a new Drupal 9 site and sets it up for development using composer and lando. It's designed to run on Ubuntu / Pop os 20, I have not tested it on Mac os. Before you begin you will need composer (https://getcomposer.org/) and lando (https://lando.dev/) installed, also ensure you have PHP-gd installed. You should run this script in the directory where you want the new site to go.
     
 You are currenly here .. $PWD. 
 
