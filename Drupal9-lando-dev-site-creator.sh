@@ -100,8 +100,6 @@ lando composer require drush/drush
 lando composer require drupal/admin_toolbar
 lando composer require drupal/token
 lando composer require drupal/devel
-lando composer require kint-php/kint
-lando composer require drupal/devel_kint_extras
 lando composer require cweagans/composer-patches
 lando composer require drupal/config_direct_save
 lando composer require drupal/console:~1.0 --prefer-dist --optimize-autoloader --sort-packages --no-update
@@ -127,7 +125,6 @@ lando drush en media_library
 lando drush en layout_builder -y
 lando drush en token
 lando drush en devel
-lando drush en devel_kint_extras
 lando drush en devel_generate
 lando drush en config_direct_save
 
@@ -151,8 +148,6 @@ cp settings.php settings/settings.shared.php
 chmod 644 settings/settings.shared.php
 chmod 644 settings.php
 
-# Trusted host settings to settings.php
-sed -i "717a \*/\n\$settings['trusted_host_patterns'] = [\n   '^localhost$',\n   '^lando.site$',\n   '^.*\.lando\.site$',\n   ];\n/**" settings.php
 
 # Changes to settings.php file
 # Empty the file
@@ -161,7 +156,7 @@ cp /dev/null settings.php
 printf "<?php\n\n include __DIR__ . '/settings/settings.shared.php';" >> settings.php;
 
 # Add trusted host patterns to settings.shared.php
-sed -i "717a \*/\n\$settings['trusted_host_patterns'] = [\n   '^localhost$',\n   '^lando.site$',\n   '^.*\.lando\.site$',\n   ];\n/**" settings/settings.shared.php
+sed -i "717a \n\$settings['trusted_host_patterns'] = [\n   '^localhost$',\n   '^lando.site$',\n   '^.*\.lando\.site$',\n   ];\n/**" settings/settings.shared.php
 
 sed -i "$ a if (file_exists(\$app_root . '/' . \$site_path . '/settings/settings.local.php')) {\n  include \$app_root . '/' . \$site_path . '/settings/settings.local.php';\n}" settings/settings.shared.php
 
