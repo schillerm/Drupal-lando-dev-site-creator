@@ -208,7 +208,7 @@ lando drush cr
 
 # Give files directory and settings.php the right permissions
 cd web/sites
-chmod go-w default/settings.php
+chmod 444 default/settings.php
 chmod go-w default
 
 
