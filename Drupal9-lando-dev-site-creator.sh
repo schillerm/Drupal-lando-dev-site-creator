@@ -201,7 +201,7 @@ printf "parameters:\n  http.response.debug_cacheability_headers: true\n  twig.co
 
 # Change composer.json so that development.services.yml is not overwritten when site is rebuilt
 cd ../../
-sed -i '42i \            },\n            "file-mapping": {\n                "[web-root]/sites/development.services.yml": false,' composer.json
+sed -i '42i \            },\n            "file-mapping": {\n                "[web-root]/sites/development.services.yml": false' composer.json
 
 # Clear the cache
 lando drush cr
