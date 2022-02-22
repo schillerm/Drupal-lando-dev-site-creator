@@ -215,7 +215,41 @@ chmod 444 default/settings.php
 chmod go-w default
 
 
+# Go back to site root
+cd ../../
 
+# Make php.ini file so we can debug in VS code
+echo "; Xdebug
+xdebug.max_nesting_level = 256
+xdebug.show_exception_trace = 0
+xdebug.collect_params = 0
+xdebug.remote_enable = 1
+xdebug.remote_autostart = 1
+xdebug.remote_host = \${LANDO_HOST_IP}
+xdebug.remote_log = ./xdebug.log
+xdebug.remote_port = 9003" > php.ini
+
+# also make folder with vs file in it .. possibly not needed
+mkdir .vscode
+
+cd .vscode
+echo '{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Listen for XDebug",
+      "type": "php",
+      "request": "launch",
+      "port": 9003,
+      "log": true,
+      "pathMappings": {
+        "/app/": "${workspaceFolder}/"
+      }
+    }
+  ]
+}' > launch.json
+
+cd ../
 
 
 
