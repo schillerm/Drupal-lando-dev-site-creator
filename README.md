@@ -12,6 +12,8 @@ I hope to make changes to it so that the drupal config is handled differently in
 
 To use .. download/clone the D9.sh file, set the permissions so it can execute (chmod). Move the file to a location where you want your new site to be and run it. After the script has run change directory (cd) to the new site folder.
 
+If you want a Drupal 9 dev site you can repeat the steps above using the D9-dev.sh file instead.
+
 Useful links:
 
 https://matti.dev/post/setup-install-drupal-9-with-composer-and-drush
