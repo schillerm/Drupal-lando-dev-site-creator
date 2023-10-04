@@ -173,8 +173,6 @@ versionfirstchar=${version:0:1}
 
 phpversion=${phpoptions[$phpchoice]}
 
-# composer create-project drupal/recommended-project:9.3.12 my_site_name
-
 # Create drupal project 
 composer create-project drupal/recommended-project:$version $sitename
 cd $sitename
