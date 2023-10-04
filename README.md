@@ -10,7 +10,7 @@ The script installs and enables a few drupal modules that I have found useful in
 
 Please note that I have only tested this on Ubuntu/Pop_OS, also you will need to have installed composer and lando on your machine before you begin. 
 
-Also be aware that you should pick a version of PHP that works with yor version of Drupal other wise you will get errors. 
+Also be aware that you should pick a version of PHP that works with your version of Drupal other wise you will get errors. 
 
 At the moment a drupal 10 install installs the latest version of drush and a drupal 9 install uses the earlier drush: version 11.5.1. I would like to do more work on this in the future.
 
