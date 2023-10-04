@@ -16,7 +16,7 @@ At the moment a drupal 10 install installs the latest version of drush and a dru
 
 I would also like to auto list the drupal versions (including dev and minor versions), rather than have it hard coded.
 
-To use .. download/clone the D.sh file, set the permissions so it can execute (chmod). Move the file to a location where you want your new site to be and run it (bash D.sh). After the script has run change directory (cd) to the new site folder.
+To use .. download/clone the D.sh file, set the permissions so it can execute (chmod). Move the file to a location where you want your new site to be and run it (bash D.sh). You may have to click y when prompted (cweagans/composer-patches related prompt for example). After the script has run change directory (cd) to the new site folder.
 
 Useful links:
 
