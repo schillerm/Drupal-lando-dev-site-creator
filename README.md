@@ -1,4 +1,4 @@
-# Drupal 9 lando dev site creator
+# Drupal lando dev site creator
 
 This project enables linux/ubuntu users to quickly set up a local Drupal development site using lando. This makes it super quick and easy to set up and configure a local Drupal site (4 mins aprox). 
 
