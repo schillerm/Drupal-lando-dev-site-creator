@@ -8,7 +8,7 @@ This is a personal project based on automating the steps in this article.. https
 
 The script installs and enables a few drupal modules that I have found useful in local development. These are admin_toolbar, admin_toolbar_tools, media, media_library, layout_builder, token, devel, and devel_generate. You may want to customise it yourself so it has the modules you want enabled. 
 
-Please note that I have only tested this on Ubuntu/Pop_OS 21, also you will need to have installed composer and lando on your machine before you begin.
+Please note that I have only tested this on Ubuntu/Pop_OS, also you will need to have installed composer and lando on your machine before you begin.
 
 To use .. download/clone the D.sh file, set the permissions so it can execute (chmod). Move the file to a location where you want your new site to be and run it. After the script has run change directory (cd) to the new site folder.
 
