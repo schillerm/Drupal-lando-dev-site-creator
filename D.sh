@@ -213,8 +213,6 @@ else
 fi
 
 
-
-
 # Add extra bits to .lando.yml file
 sed -i "$ a\  xdebug: true\nservices:\n appserver:\n  type: php:$phpversion\n  build:\n   - composer install" .lando.yml
 
